@@ -4,10 +4,16 @@ from django.shortcuts import render
 # Controalele = views = functii
 
 def index(request):
-    return render(request, 'products/index.html')
+    context = {
+        'title': 'Store',
+    }
+    return render(request, 'products/index.html', context)
 
 def products(request):
-    return render(request, 'products/products.html')
+    context = {
+        'title': 'Store - Katalog',
+    }
+    return render(request, 'products/products.html', context)
 
 def test_context(request):
     context = {
