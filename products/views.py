@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 
 # Create your views here.
 # Controalele = views = functii
@@ -27,7 +28,7 @@ def test_context(request):
         ],
         #'promotion': True,
         'products_of_promotion':[
-            {'name': 'Черный рюкзак Nike Heritage', 'price': 2340.00},
+            {'name': 'Черный рюкзак Nike Heritage', 'price': 2340.00, 'date': datetime.datetime(year=2021, month=11, day=9)},
         ]
     }
     return render(request, 'products/test-context.html', context)
